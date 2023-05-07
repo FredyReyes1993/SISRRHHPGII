@@ -4,5 +4,6 @@ from django.contrib import admin
 
 
 urlpatterns = [   
+    path('registroEmpleado/', views.gestionEmpleados, name='gestionEmpleados'),
     path('registroEm', views.registroEm, name='registroEm'),
 ]
