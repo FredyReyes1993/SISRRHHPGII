@@ -45,9 +45,9 @@ def signup(request):
         mensaje = 'Usuario creado con éxito'
 
 # Bienvenida por medio de correo
-        subject = "Welcome to Django Login!!"
+        subject = "Inicio de sessión RRHH|SEUS!"
         message = "Hello " + myuser.first_name + "!! \n" + \
-            "Welcome to GFG!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nAnubhav Madhav"
+            "Bienvenidos al Sistema Web RRHH!! \n\n. Te hemos enviado un correo , por favor confirma la dirección de tu correo ingresado. \n\nGracias\n RRHH"
         from_email = settings.EMAIL_HOST_USER
         to_list = [myuser.email]
         send_mail(subject, message, from_email, to_list, fail_silently=True)
@@ -124,5 +124,5 @@ def activate(request, uidb64, token):
 
 def signout(request):
     logout(request)
-    messages.success(request, "Logged Out Successfully!!")
-    return redirect('home')
+    messages.success(request, "Has cerrado sesión!!")
+    return render(request, 'LOGIN/index.html')

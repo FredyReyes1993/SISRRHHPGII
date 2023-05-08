@@ -11,7 +11,7 @@
     <!-- ==== Toggle button end === -->
     <!-- ===================================== Seccion Contenedor Inicio ======================================== -->
     <div class="container" id="advanced-search-form">
-        <h2 >Gestión de Reportes Clientes</h2>
+        <h2 >Gestión de Reportes Empleados</h2>
             <!-- 2 column -->
             <div class="row mb-4">
                 <div class="col">
@@ -20,7 +20,7 @@
                         <label class="form-label"><h2> Generar Reportes en General</h2></label>
                 </div>
                 <div> 
-                    <a href="{%url 'reportesClientes' %}" class="btn btn-info btn-lg btn-responsive" target="_blank"> <span
+                    <a href="{%url 'reportesEmpleados' %}" class="btn btn-info btn-lg btn-responsive" target="_blank"> <span
                         class="glyphicon glyphicon-search"></span>Generar PDF</a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <label class="form-label"><h3> Generar Reportes por fecha</h3></label>
+                        <label class="form-label"><h3> Generar Reportes por fecha para vacaciones</h3></label>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <form method="GET" action="{% url 'reportespormes' %}" target="_blank">
+                        <form method="GET" action="{% url 'reportespormesE' %}" target="_blank">
                         {% csrf_token %}
                         <label class="form-label">Fecha de Inicio</label>
                         <input type="date" name="fecha_inicio" id="fecha_inicio" class="form-control" required />

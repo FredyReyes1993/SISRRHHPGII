@@ -133,6 +133,13 @@ STATICFILES_DIRS = [
     'rrhhseusproject/static',
 ]
 
+#Cargar Imagenes
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
+ 
+
+
+
 AUTHENTICATION_BACKENDS = [
     'LOGIN.auth.Email_or_username',
 ]

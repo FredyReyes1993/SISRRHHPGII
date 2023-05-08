@@ -18,7 +18,7 @@
                     <h2><b>Listado Empleados</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="#" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span><h6>Agregar Nuevos Empleados</h6></span></a>
+                    <a href="{% url 'registrarEmpleados'%}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span><h6>Agregar Nuevos Empleados</h6></span></a>
                 </div>
             </div>
         </div>
@@ -27,10 +27,11 @@
                 <thead>
                     <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">P_Nombre</th>
-                        <th scope="col">S_Nombre</th>
-                        <th scope="col">P_Apellido</th>
-                        <th scope="col">S_Apellido/th>
+                        <th scope="col">Foto</th>                       
+                        <th scope="col">Primer Nombre</th>
+                        <th scope="col">Segundo Nombre</th>
+                        <th scope="col">Primer Apellido</th>
+                        <th scope="col">Segundo Apellido</th>
                         <th scope="col">Teléfono</th>
                         <th scope="col">Estatus</th>
                         <th scope="col">Acción</th>
@@ -42,13 +43,14 @@
                     {% for empleado in ListEmpleados %}
                     <tr class="bg-blue">
                         <td class="pt-3">{{empleado.ID_EMP}}</td>
+                        <td class="pt-3"><img src="{{empleado.FOTO.url}}" width="50" height="50"></td>
                         <td class="pt-3">{{empleado.PNOM}}</td>
                         <td class="pt-3 mt-1">{{empleado.SNOM}}</td>
                         <td class="pt-3">{{empleado.PAPE}}</td>
                         <td class="pt-3">{{empleado.SAPE}}</td>
                         <td class="pt-3">{{empleado.CELCASA}}</td>
                         <td class="pt-3 mt-1">{{empleado.ESTATUS}}</td>
-                        <td><a href="#" class="btn btn-info">Editar</a></td>                      
+                        <td><a href="{% url 'editarEmpleados' empleado.ID_EMP %}" class="btn btn-info">Editar</a></td>                      
                     </tr>
                     {% endfor %}
                 </tbody>

@@ -5,5 +5,6 @@ from django.contrib import admin
 
 urlpatterns = [   
     path('registroEmpleado/', views.gestionEmpleados, name='gestionEmpleados'),
-    path('registroEm', views.registroEm, name='registroEm'),
+    path('registroEmpleado', views.registrarEmpleados, name='registrarEmpleados'),
+    path('registroEmpleado/<int:ID_EMP>/', views.editarEmpleados, name='editarEmpleados'),
 ]

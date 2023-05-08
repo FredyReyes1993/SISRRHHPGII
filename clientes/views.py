@@ -15,8 +15,7 @@ def editarCliente(request, ID_CLIENTES):
         emailcliente = request.POST['txtEmailCliente']
         direcliente = request.POST['txtDireccionCliente']
         estacliente = request.POST['txtestaCliente']
-        print(direcliente)
-  
+
         cliente.NOMBRE_CLIENTES = ncliente
         cliente.TELEFONO = tcliente
         cliente.NIT = nitcliente

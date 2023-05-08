@@ -1,6 +1,6 @@
 {% extends 'BASE/base.html'%}
 {% load static %}
-{% block title%}Gestión | Clientes{%endblock%}
+{% block title%}Gestión | Empleados{%endblock%}
 {% block content %}
 <link href="{% static 'css/registroClientes.css' %}" rel="stylesheet" type="text/css" />
 <!-- Page content holder -->
@@ -22,7 +22,7 @@
                 data: {
                     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
                     datasets: [{
-                        label: 'Clientes por mes',
+                        label: 'Empleados por mes',
                         data: {{datos|safe}},
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',

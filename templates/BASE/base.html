@@ -65,62 +65,70 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'registroEm'%}" class="nav-link text-dark font-italic">
+                <a href="{% url 'registrarEmpleados'%}" class="nav-link text-dark font-italic">
                     <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
                     Registrar empleados
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'gestionClientes'%}" class="nav-link text-dark font-italic">
+                <a href="{% url 'agregarClientes' %}" class="nav-link text-dark font-italic">
                     <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
                     Registrar Clientes
                 </a>
             </li>
+
             <li class="nav-item">
-                <a href="{% url 'reportesCliente'%}" class="nav-link text-dark font-italic">
-                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                    Reportes
+                <a href="{% url 'gestionEmpleados'%}" class="nav-link text-dark font-italic">
+                    <i class="fa fa-table mr-3 text-primary"aria-hidden="true"></i>
+                    Listado Empleados 
                 </a>
             </li>
+
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                    Sedes
+                <a href="{% url 'gestionClientes'%}" class="nav-link text-dark font-italic">
+                    <i class="fa fa-table mr-3 text-primary"aria-hidden="true"></i>
+                    Listado Clientes 
                 </a>
             </li>
             
+
+            <li class="nav-item">
+                <a href="{% url 'reportesEmpleado'%}"" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Reportes Empleados
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{% url 'reportesCliente'%}" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Reportes Clientes
+                </a>
+            </li>
         </ul>
 
-        <p class="text-gray font-weight-bold text-uppercase px-3 medium py-2  mb-0">Charts</p>
+        <p class="text-gray font-weight-bold text-uppercase px-3 medium py-2  mb-0">Dashboard</p>
         
         <ul class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-                <a href="{% url 'dasboardClientes'%}" class="nav-link text-dark font-italic">
-                    <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-                    Area charts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#{% url 'gestionEmpleados'%}" class="nav-link text-dark font-italic">
+                <a href="{% url 'dasboardEmpleados'%}" class="nav-link text-dark font-italic">
                     <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-                    Bar charts
+                    Gráfico Empleados
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-                    Pie charts
+                <a href="{% url 'dasboardClientes'%}" class="nav-link text-dark font-italic">
+                    <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                    Gráfico Clientes
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-                    Line charts
-                </a>
-            </li>
-            <button type="button" class="btn btn-primary"><span class="bi bi-box-arrow-left"></span> Cerrar
-                Sesión</button>
+<hr>
+<div class="text-center">
+           <a href="{% url 'signout'%}" ><button type="button" class="btn btn-primary"><span class="bi bi-box-arrow-left"></span> Cerrar
+                Sesión</button></a>
         </ul>
+
+    </div>
     </div >
 
 
